@@ -1,0 +1,167 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6fb;
+  color: #222;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+.header {
+  background: #5b4bdb;
+  color: white;
+  padding: 28px 8%;
+}
+
+.header h1 {
+  margin: 0 0 8px;
+}
+
+.header p {
+  margin: 0;
+  opacity: 0.9;
+}
+
+.container {
+  width: min(1000px, 90%);
+  margin: 35px auto;
+}
+
+.note-form,
+.notes-section {
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  margin-bottom: 28px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.note-form h2,
+.notes-heading h2 {
+  margin-top: 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #d8dbea;
+  border-radius: 8px;
+  outline: none;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #5b4bdb;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 11px 16px;
+  background: #5b4bdb;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.88;
+}
+
+.cancel-button {
+  background: #666;
+}
+
+.notes-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notes-heading span {
+  color: #666;
+}
+
+.search-input {
+  margin: 8px 0 22px;
+}
+
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.note-card {
+  padding: 20px;
+  border: 1px solid #e5e5ef;
+  border-radius: 12px;
+  overflow-wrap: anywhere;
+}
+
+.note-card h3 {
+  margin-top: 0;
+}
+
+.note-card p {
+  white-space: pre-wrap;
+  line-height: 1.6;
+}
+
+.note-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.delete-button {
+  background: #e74c3c;
+}
+
+.empty-message {
+  text-align: center;
+  padding: 25px 0;
+  color: #777;
+}
+
+@media (max-width: 600px) {
+  .header {
+    padding: 24px 5%;
+  }
+
+  .container {
+    width: 94%;
+    margin: 20px auto;
+  }
+
+  .note-form,
+  .notes-section {
+    padding: 18px;
+  }
+
+  .notes-grid {
+    grid-template-columns: 1fr;
+  }
+}
